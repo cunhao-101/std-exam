@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="性病规范化诊疗考点速记与自测——公共卫生导向，含速记卡、核心对照表、鉴别诊断与40道自测题。">
+<title>性病规范化诊疗 · 考点速记与自测</title>
+<style>
+  :root{
+    --paper:#ffffff; --ground:#f3f7f5; --ground2:#e8f0ec; --card:#ffffff;
+    --ink:#15211e; --ink2:#465650; --ink3:#71807a; --line:#d7e1dc;
+    --accent:#0f7a68; --accent-ink:#0a5a4c; --accent-soft:#deefe9;
+    --star:#a86d12; --star-soft:#f5ecd6; --warn:#b0353f; --warn-soft:#f6dfe1;
+    --shadow:0 1px 2px rgba(20,40,35,.04),0 4px 16px rgba(20,40,35,.06);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#141d1a; --ground:#0f1715; --ground2:#1a2521; --card:#17211d;
+      --ink:#e9efec; --ink2:#a6b6b0; --ink3:#788882; --line:#293833;
+      --accent:#4fc9b1; --accent-ink:#7fdcc8; --accent-soft:#173029;
+      --star:#d8a94e; --star-soft:#2c2515; --warn:#e28a92; --warn-soft:#33191c;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141d1a; --ground:#0f1715; --ground2:#1a2521; --card:#17211d;
+    --ink:#e9efec; --ink2:#a6b6b0; --ink3:#788882; --line:#293833;
+    --accent:#4fc9b1; --accent-ink:#7fdcc8; --accent-soft:#173029;
+    --star:#d8a94e; --star-soft:#2c2515; --warn:#e28a92; --warn-soft:#33191c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"]{
+    --paper:#ffffff; --ground:#f3f7f5; --ground2:#e8f0ec; --card:#ffffff;
+    --ink:#15211e; --ink2:#465650; --ink3:#71807a; --line:#d7e1dc;
+    --accent:#0f7a68; --accent-ink:#0a5a4c; --accent-soft:#deefe9;
+    --star:#a86d12; --star-soft:#f5ecd6; --warn:#b0353f; --warn-soft:#f6dfe1;
+    --shadow:0 1px 2px rgba(20,40,35,.04),0 4px 16px rgba(20,40,35,.06);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px 96px}
+
+  /* ---------- header ---------- */
+  header.top{
+    position:sticky; top:0; z-index:50; background:color-mix(in srgb,var(--ground) 88%,transparent);
+    backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line);
+  }
+  .top-in{max-width:1080px; margin:0 auto; padding:14px 20px 0}
+  .brand{display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap}
+  .mark{
+    flex:none; width:42px; height:42px; border-radius:11px; margin-top:2px;
+    background:var(--accent); color:#fff; display:grid; place-items:center;
+    font-weight:800; font-size:19px; letter-spacing:.5px;
+  }
+  .mark span{color:#fff}
+  h1.title{font-size:20px; line-height:1.25; margin:0; font-weight:800; letter-spacing:.2px; text-wrap:balance}
+  .sub{margin:3px 0 0; color:var(--ink3); font-size:12.5px; letter-spacing:.2px}
+  .theme-btn{
+    margin-left:auto; flex:none; border:1px solid var(--line); background:var(--card); color:var(--ink2);
+    border-radius:9px; padding:7px 11px; font:inherit; font-size:12.5px; cursor:pointer; line-height:1;
+  }
+  .theme-btn:hover{border-color:var(--accent); color:var(--accent-ink)}
+  nav.tabs{display:flex; gap:2px; margin-top:12px; overflow-x:auto; scrollbar-width:none}
+  nav.tabs::-webkit-scrollbar{display:none}
+  .tab{
+    flex:none; appearance:none; border:0; background:transparent; color:var(--ink2);
+    font:inherit; font-weight:600; font-size:14.5px; padding:11px 15px 13px; cursor:pointer;
+    border-bottom:2.5px solid transparent; white-space:nowrap; letter-spacing:.3px;
+  }
+  .tab:hover{color:var(--ink)}
+  .tab[aria-selected="true"]{color:var(--accent-ink); border-bottom-color:var(--accent)}
+  .tab .n{font-size:11px; color:var(--ink3); margin-left:5px; font-weight:600}
+
+  /* ---------- generic ---------- */
+  section.panel{display:none; padding-top:26px; animation:fade .25s ease}
+  section.panel.on{display:block}
+  @keyframes fade{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){section.panel,*{animation:none!important}}
+  .lead{color:var(--ink2); font-size:14.5px; margin:0 0 22px; max-width:60ch}
+  .eyebrow{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--accent-ink); margin:0 0 4px;
+  }
+  h2.sec{font-size:17px; font-weight:800; margin:34px 0 14px; letter-spacing:.2px}
+  h2.sec:first-of-type{margin-top:6px}
+  .star{color:var(--star)}
+  .pill{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:.4px;
+    padding:2px 8px; border-radius:999px; vertical-align:middle;
+  }
+  .pill.hi{background:var(--star-soft); color:var(--star)}
+  .pill.warn{background:var(--warn-soft); color:var(--warn)}
+  .pill.acc{background:var(--accent-soft); color:var(--accent-ink)}
+
+  /* ---------- flash cards (numbers) ---------- */
+  .grid{display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(158px,1fr))}
+  .fc{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:15px 15px 14px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  }
+  .fc::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); opacity:.85}
+  .fc.s::before{background:var(--star)}
+  .fc.w::before{background:var(--warn)}
+  .fc .num{font-size:26px; font-weight:800; line-height:1.05; letter-spacing:-.5px; color:var(--ink)}
+  .fc .num small{font-size:14px; font-weight:700; color:var(--ink2)}
+  .fc .lab{margin-top:6px; font-size:12.5px; color:var(--ink2); line-height:1.45}
+  .fc .dis{margin-top:8px; font-size:11px; color:var(--ink3); font-weight:600; letter-spacing:.3px}
+  .group-h{font-size:13px; font-weight:800; color:var(--accent-ink); letter-spacing:.4px; margin:28px 0 12px; display:flex; align-items:center; gap:8px}
+  .group-h::after{content:""; height:1px; flex:1; background:var(--line)}
+
+  /* ---------- tables ---------- */
+  .tw{overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); margin:14px 0 6px; background:var(--card)}
+  table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:520px}
+  caption{caption-side:top; text-align:left; font-weight:700; font-size:13px; color:var(--ink2); padding:12px 14px 0}
+  th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  thead th{background:var(--ground2); color:var(--ink); font-weight:700; font-size:12.5px; letter-spacing:.3px; position:sticky; top:0}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:var(--accent-soft)}
+  td strong,th strong{color:var(--ink); font-weight:700}
+  .hl{color:var(--accent-ink); font-weight:700}
+  .hlw{color:var(--warn); font-weight:700}
+
+  /* ---------- accordion ---------- */
+  .acc{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:12px; overflow:hidden}
+  .acc>summary{
+    list-style:none; cursor:pointer; padding:16px 18px; display:flex; align-items:center; gap:12px;
+    font-weight:800; font-size:16px;
+  }
+  .acc>summary::-webkit-details-marker{display:none}
+  .acc>summary:hover{background:var(--ground2)}
+  .acc .chev{margin-left:auto; color:var(--ink3); transition:transform .2s; flex:none}
+  .acc[open] .chev{transform:rotate(90deg)}
+  .acc .en{font-size:12px; color:var(--ink3); font-weight:600; letter-spacing:.3px}
+  .acc .body{padding:2px 18px 18px; border-top:1px solid var(--line)}
+  .acc .body h4{font-size:13px; font-weight:800; color:var(--accent-ink); letter-spacing:.4px; margin:18px 0 8px; text-transform:none}
+  .acc .body h4:first-child{margin-top:14px}
+  ul.pts{margin:0; padding:0; list-style:none}
+  ul.pts li{position:relative; padding:5px 0 5px 18px; font-size:14px; color:var(--ink2); line-height:1.6}
+  ul.pts li::before{content:""; position:absolute; left:2px; top:13px; width:6px; height:6px; border-radius:50%; background:var(--accent); opacity:.7}
+  ul.pts li b{color:var(--ink); font-weight:700}
+  ul.pts li .k{color:var(--accent-ink); font-weight:700}
+  ul.pts li .kw{color:var(--warn); font-weight:700}
+
+  /* ---------- quiz ---------- */
+  .qbar{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 18px}
+  .filters{display:flex; gap:6px; flex-wrap:wrap}
+  .chip{
+    border:1px solid var(--line); background:var(--card); color:var(--ink2); border-radius:999px;
+    padding:6px 13px; font:inherit; font-size:13px; font-weight:600; cursor:pointer; letter-spacing:.3px;
+  }
+  .chip[aria-pressed="true"]{background:var(--accent); color:#fff; border-color:var(--accent)}
+  :root[data-theme="dark"] .chip[aria-pressed="true"]{color:#062b24}
+  @media(prefers-color-scheme:dark){.chip[aria-pressed="true"]{color:#062b24}}
+  .counter{margin-left:auto; font-size:13px; color:var(--ink3); font-weight:600}
+  .counter b{color:var(--accent-ink)}
+  .reveal-all{border:1px solid var(--line); background:var(--card); color:var(--ink2); border-radius:9px; padding:7px 12px; font:inherit; font-size:13px; font-weight:600; cursor:pointer}
+  .reveal-all:hover{border-color:var(--accent); color:var(--accent-ink)}
+  .q{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:12px; padding:16px 18px}
+  .q .qtop{display:flex; gap:10px; align-items:flex-start}
+  .q .qi{flex:none; width:24px; height:24px; border-radius:7px; background:var(--accent-soft); color:var(--accent-ink); font-weight:800; font-size:12.5px; display:grid; place-items:center; margin-top:1px}
+  .q .cat{font-size:10.5px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--ink3); margin-bottom:3px}
+  .q .qt{font-size:14.5px; font-weight:600; color:var(--ink); line-height:1.55}
+  .q .qt em{font-style:normal; color:var(--warn); font-weight:700}
+  .ans{
+    margin:12px 0 0; padding:0; max-height:0; overflow:hidden; opacity:0;
+    transition:max-height .3s ease,opacity .25s ease,padding .3s ease; font-size:14px; color:var(--ink2); line-height:1.65;
+    border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 8px 8px 0;
+  }
+  .q.open .ans{max-height:460px; opacity:1; padding:11px 14px}
+  .ans b{color:var(--accent-ink); font-weight:800}
+  .ans .kw{color:var(--warn); font-weight:800}
+  .showbtn{margin-top:12px; border:1px solid var(--accent); background:transparent; color:var(--accent-ink); border-radius:9px; padding:7px 14px; font:inherit; font-size:13px; font-weight:700; cursor:pointer}
+  .showbtn:hover{background:var(--accent-soft)}
+  .q.open .showbtn{opacity:.55}
+  .q.hide{display:none}
+
+  /* ---------- callout ---------- */
+  .note{
+    background:var(--warn-soft); border:1px solid color-mix(in srgb,var(--warn) 30%,var(--line));
+    border-radius:var(--radius); padding:14px 16px; font-size:13.5px; color:var(--ink2); line-height:1.6; margin:22px 0;
+  }
+  .note b{color:var(--warn); font-weight:800}
+  .foot{margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--ink3); font-size:12px; line-height:1.7}
+  a{color:var(--accent-ink)}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
+  @media (max-width:560px){
+    h1.title{font-size:18px}
+    .fc .num{font-size:23px}
+    .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <div class="mark"><span>性</span></div>
+      <div>
+        <h1 class="title">性病规范化诊疗 · 考点速记与自测</h1>
+        <p class="sub">依《中国临床皮肤病学》性传播疾病章 · 6 病 · 公共卫生 / 实验室 / 鉴别导向 · ★=高频考点</p>
+      </div>
+      <button class="theme-btn" id="themeBtn" type="button">◐ 主题</button>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="学习模块">
+      <button class="tab" role="tab" aria-selected="true" data-p="cards">速记卡<span class="n">数字·时限</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="core">核心对照<span class="n">必背表</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="dz">各病要点<span class="n">6 病</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="ddx">鉴别诊断</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="quiz">自测题<span class="n">40</span></button>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ 速记卡 ============ -->
+<section class="panel on" id="p-cards" role="tabpanel">
+  <p class="eyebrow">Flash Cards</p>
+  <p class="lead">最易混的数字、时限、滴度、追溯期——按病与主题分组。每张卡：<b>数值 → 含义 → 归属</b>。带色条：<span class="star">琥珀=高频</span> / <span class="hlw">红=易错警示</span>。</p>
+
+  <div class="group-h">梅毒 · 时程与分期</div>
+  <div class="grid">
+    <div class="fc s"><div class="num">2–4<small> 周</small></div><div class="lab">一期硬下疳潜伏期</div><div class="dis">梅毒</div></div>
+    <div class="fc"><div class="num">7–10<small> 周</small></div><div class="lab">二期发生（或硬下疳后 6–8 周）</div><div class="dis">梅毒</div></div>
+    <div class="fc s"><div class="num">2<small> 年</small></div><div class="lab">早期/晚期分界；早期有传染性</div><div class="dis">梅毒</div></div>
+    <div class="fc"><div class="num">7<small> 周</small></div><div class="lab">螺旋体可过胎盘（5 个月前胎儿可不感染）</div><div class="dis">梅毒·胎传</div></div>
+    <div class="fc"><div class="num">10–30<small> 年</small></div><div class="lab">心血管梅毒发生</div><div class="dis">梅毒·三期</div></div>
+    <div class="fc"><div class="num">10–20<small> 年</small></div><div class="lab">脊髓痨；麻痹性痴呆 10–15 年</div><div class="dis">神经梅毒</div></div>
+  </div>
+
+  <div class="group-h">梅毒 · 血清学与判愈 <span class="pill hi">高频</span></div>
+  <div class="grid">
+    <div class="fc s"><div class="num">3<small> 周</small></div><div class="lab">FTA-ABS 即阳（最灵敏）</div><div class="dis">特异性试验</div></div>
+    <div class="fc"><div class="num">4<small> 周</small></div><div class="lab">VDRL / RPR 才阳性</div><div class="dis">非特异性试验</div></div>
+    <div class="fc w"><div class="num">4<small> 倍</small></div><div class="lab">滴度回升 4 倍 = 再感染 / 治疗失败</div><div class="dis">疗效判读</div></div>
+    <div class="fc w"><div class="num">1:32</div><div class="lab">初始高滴度治后不降 → 查神经梅毒</div><div class="dis">疗效判读</div></div>
+    <div class="fc s"><div class="num">1–2<small> 年</small></div><div class="lab">一期 1 年 / 二期 2 年内转阴</div><div class="dis">判愈</div></div>
+    <div class="fc"><div class="num">1–2<small>%</small></div><div class="lab">前带现象致二期假阴性</div><div class="dis">易错点</div></div>
+  </div>
+
+  <div class="group-h">梅毒 · 随访与性伴</div>
+  <div class="grid">
+    <div class="fc s"><div class="num">3<small> 个月</small></div><div class="lab">性伴追溯期（接触传染性梅毒）</div><div class="dis">性伴管理</div></div>
+    <div class="fc"><div class="num">2–3<small> 年</small></div><div class="lab">早期梅毒随访（首年每 3 月，后每半年）</div><div class="dis">随访</div></div>
+    <div class="fc"><div class="num">8<small> 个月</small></div><div class="lab">治疗孕妇所生血清阳性婴儿每月查 ×8</div><div class="dis">母婴随访</div></div>
+  </div>
+
+  <div class="group-h">淋病</div>
+  <div class="grid">
+    <div class="fc s"><div class="num">2–10<small> 天</small></div><div class="lab">潜伏期（鉴别表列 3–5 天）</div><div class="dis">淋病</div></div>
+    <div class="fc"><div class="num">&gt;95<small>%</small></div><div class="lab">男性急性尿道炎涂片阳性率（可诊断）</div><div class="dis">涂片</div></div>
+    <div class="fc w"><div class="num">40–70<small>%</small></div><div class="lab">女性宫颈涂片阳性率（需培养确诊）</div><div class="dis">涂片·易错</div></div>
+    <div class="fc"><div class="num">11/25/53<small>%</small></div><div class="lab">输卵管炎 1/2/≥3 次后不育率</div><div class="dis">PID 后遗</div></div>
+    <div class="fc"><div class="num">1<small> 小时</small></div><div class="lab">新生儿出生后 1h 内红霉素/硝酸银点眼</div><div class="dis">眼炎预防</div></div>
+  </div>
+
+  <div class="group-h">沙眼衣原体 <span class="pill hi">判愈高频</span></div>
+  <div class="grid">
+    <div class="fc"><div class="num">1–3<small> 周</small></div><div class="lab">潜伏期（长于淋病）</div><div class="dis">衣原体</div></div>
+    <div class="fc w"><div class="num">70–90<small>%</small></div><div class="lab">女性宫颈感染无症状 → 需筛查</div><div class="dis">公卫要点</div></div>
+    <div class="fc s"><div class="num">2<small> 周</small></div><div class="lab">抗原检测判愈时间（疗程结束后）</div><div class="dis">判愈</div></div>
+    <div class="fc s"><div class="num">3–4<small> 周</small></div><div class="lab">核酸检测判愈时间（疗程结束后）</div><div class="dis">判愈</div></div>
+    <div class="fc"><div class="num">3–4<small> 月</small></div><div class="lab">女性治后复查（查再感染防 PID）</div><div class="dis">随访</div></div>
+    <div class="fc"><div class="num">2<small> 个月</small></div><div class="lab">性伴追溯期（前 2 个月所有性伴）</div><div class="dis">性伴管理</div></div>
+  </div>
+
+  <div class="group-h">生殖器疱疹</div>
+  <div class="grid">
+    <div class="fc"><div class="num">2–20<small> 天</small></div><div class="lab">原发潜伏期（多 3–5 天）</div><div class="dis">GH</div></div>
+    <div class="fc s"><div class="num">HSV-2</div><div class="lab">主要病原（HSV-1 占 10–40%）</div><div class="dis">病原</div></div>
+    <div class="fc w"><div class="num">20–50<small>%</small></div><div class="lab">原发 GH 孕妇传胎儿率</div><div class="dis">母婴</div></div>
+    <div class="fc w"><div class="num">&gt;50<small>%</small></div><div class="lab">新生儿 HSV 不治病死率</div><div class="dis">新生儿</div></div>
+    <div class="fc"><div class="num">≥6<small> 次/年</small></div><div class="lab">频繁复发 → 长期抑制疗法</div><div class="dis">治疗</div></div>
+  </div>
+
+  <div class="group-h">尖锐湿疣（HPV）</div>
+  <div class="grid">
+    <div class="fc"><div class="num">1–8<small> 月</small></div><div class="lab">潜伏期（平均 3 个月）</div><div class="dis">HPV</div></div>
+    <div class="fc s"><div class="num">6·11</div><div class="lab">低危型（引起尖锐湿疣）</div><div class="dis">HPV 分型</div></div>
+    <div class="fc w"><div class="num">16·18</div><div class="lab">高危型（宫颈癌相关）</div><div class="dis">HPV 分型</div></div>
+    <div class="fc"><div class="num">5<small>% · 5min</small></div><div class="lab">醋酸白：5% 醋酸，5 分钟变白</div><div class="dis">检测</div></div>
+    <div class="fc"><div class="num">60/22<small>%</small></div><div class="lab">尿道内/阴囊 HPV 贮存库（复发源）</div><div class="dis">复发</div></div>
+  </div>
+
+  <div class="group-h">软下疳</div>
+  <div class="grid">
+    <div class="fc"><div class="num">3–14<small> 天</small></div><div class="lab">潜伏期（平均 4–7 天）</div><div class="dis">软下疳</div></div>
+    <div class="fc s"><div class="num">3<small> 联征</small></div><div class="lab">潜蚀边缘 + 灰脓基底 + 剧痛</div><div class="dis">诊断</div></div>
+    <div class="fc w"><div class="num">0</div><div class="lab">我国尚无确诊病例</div><div class="dis">流行</div></div>
+  </div>
+</section>
+
+<!-- ============ 核心对照 ============ -->
+<section class="panel" id="p-core" role="tabpanel">
+  <p class="eyebrow">Core Tables</p>
+  <p class="lead">四张"背了就得分"的跨病对照表：血清学两类试验、性伴追溯、各病金标准检测、判愈与随访。</p>
+
+  <h2 class="sec">① 梅毒血清学两类试验 <span class="pill hi">★最高频</span></h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>类别</th><th>代表试验</th><th>抗原/抗体</th><th>主要用途</th><th>治疗后</th></tr></thead>
+    <tbody>
+      <tr><td><strong>非特异性</strong><br>（非螺旋体抗原）</td><td class="hl">RPR · TRUST<br>VDRL · USR</td><td>心磷脂 /<br>抗心磷脂抗体（反应素）</td><td><strong>筛查</strong>；可<strong>定量</strong>，滴度随病情 → <span class="hl">疗效观察 · 判愈 · 判断复发/再感染</span></td><td>滴度下降、可转阴</td></tr>
+      <tr><td><strong>特异性</strong><br>（螺旋体抗原）</td><td class="hl">TPPA · TPHA<br>FTA-ABS · EIA</td><td>螺旋体成分 /<br>抗螺旋体 IgG</td><td><strong>确诊（证实试验）</strong></td><td class="hlw">终生阳性 → 不能用于疗效/判愈</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="lead" style="margin:12px 0 0">🔑 一句话：<b>非特异性看滴度、管疗效判愈；特异性管确诊、终生阳性不看疗效。</b> · 神经梅毒脑脊液首选 <span class="hl">VDRL</span>（阳性即诊断，阴性不排除）。</p>
+
+  <h2 class="sec">② 性伴追溯 / 通知期</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>疾病</th><th>追溯范围</th><th>处理要点</th></tr></thead>
+    <tbody>
+      <tr><td><strong>梅毒</strong></td><td class="hl">前 3 个月内</td><td>检查；不能查者按一期梅毒<strong>预防性（流行病学）治疗</strong>；能复查者每月 1 次临床+RPR</td></tr>
+      <tr><td><strong>沙眼衣原体</strong></td><td class="hl">前 2 个月内所有性伴</td><td>均检查+治疗；疗程完成前避免性行为</td></tr>
+      <tr><td><strong>淋病</strong></td><td>有感染的性伴</td><td>同时治疗；常合并衣原体一并处理</td></tr>
+      <tr><td><strong>生殖器疱疹</strong></td><td>告知性伴</td><td>前驱/皮损期避免接触；无症状排毒仍传染</td></tr>
+      <tr><td><strong>尖锐湿疣</strong></td><td>动员性伴来诊</td><td class="hlw">女性性伴须做宫颈癌细胞学筛查</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="sec">③ 各病"金标准 / 首选检测"</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>疾病</th><th>病原</th><th>金标准/首选</th><th>关键提示</th></tr></thead>
+    <tbody>
+      <tr><td>梅毒（早期）</td><td>苍白螺旋体<br>（<span class="hlw">不能体外培养</span>）</td><td class="hl">暗视野显微镜</td><td>查硬下疳/扁平湿疣/黏膜斑活螺旋体；阴性连查 3 天</td></tr>
+      <tr><td>淋病</td><td>淋病奈瑟菌</td><td class="hl">培养（Thayer-Martin）</td><td>男性尿道涂片&gt;95% 可诊断；女性宫颈涂片仅 40–70%</td></tr>
+      <tr><td>沙眼衣原体</td><td>衣原体</td><td class="hl">细胞培养（最特异）</td><td>可作证实+判愈；NAAT 敏但不分死活菌；血清抗体不能单独诊断</td></tr>
+      <tr><td>生殖器疱疹</td><td>HSV</td><td class="hl">病毒分离培养</td><td>Tzanck 见多核巨细胞+核内包涵体；gG 抗体查亚临床</td></tr>
+      <tr><td>尖锐湿疣</td><td>HPV（不能培养）</td><td class="hl">核酸杂交 / PCR</td><td>醋酸白特异性差有假阳；病理凹空细胞 koilocytes</td></tr>
+      <tr><td>软下疳</td><td>杜克雷嗜血杆菌</td><td>涂片/培养查革兰阴性短杆菌</td><td>成堆/链状；我国无确诊病例</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="sec">④ 判愈标准与随访</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>疾病</th><th>判愈 / 疗效观察</th><th>随访要点</th></tr></thead>
+    <tbody>
+      <tr><td><strong>梅毒</strong></td><td><span class="hl">非特异性试验定量</span>：一期 1 年 / 二期 2 年内转阴；回升 4 倍=失败/再感染</td><td>早期随访 2–3 年；神经梅毒查脑脊液至正常后每年 1 次≥3 年</td></tr>
+      <tr><td><strong>衣原体</strong></td><td><span class="hl">抗原后 2 周 / 核酸后 3–4 周</span>做判愈；孕妇必须判愈</td><td>女性治后 3–4 个月复查再感染</td></tr>
+      <tr><td><strong>尖锐湿疣</strong></td><td class="hl">疣体消失即治愈（但均可复发，再治仍有效）</td><td>治疗前后必做醋酸白清除亚临床损害</td></tr>
+      <tr><td><strong>淋病</strong></td><td>治疗后随访判愈</td><td>性伴同治</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note"><b>关于疫情报告分类：</b>本教材为《临床皮肤病学》，未含法定传染病甲乙丙类归属、报告时限、报告卡填写等条文。你已选择先只用本教材内容——如考试涉及报告制度，请查《传染病防治法》《性病防治管理办法(2013)》官方原文，需要时可再让我整理。</div>
+</section>
+
+<!-- ============ 各病要点 ============ -->
+<section class="panel" id="p-dz" role="tabpanel">
+  <p class="eyebrow">By Disease</p>
+  <p class="lead">6 病折叠卡。点击展开。每病：病原原理 → 潜伏/分期 → 临床 → 实验室 → 判愈随访/性伴 → 鉴别母婴。</p>
+
+  <details class="acc" open>
+    <summary>梅毒 <span class="en">Syphilis</span> <span class="pill hi">最大分值</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <h4>病原与性质</h4>
+      <ul class="pts">
+        <li><b>苍白螺旋体</b>；<span class="kw">至今不能体外培养</span> → 早期靠暗视野+血清学。增代 30–33h（疗程需长）。</li>
+        <li>传染性：<span class="k">感染后 1 年内最强</span>；一次性接触受染约 30%；病期&gt;2 年一般无性传染性。</li>
+      </ul>
+      <h4>分期（2 年为界）</h4>
+      <ul class="pts">
+        <li><b>早期（≤2 年，有传染性）</b>：一期硬下疳 / 二期 / 早期潜伏。</li>
+        <li><b>晚期（&gt;2 年，无传染性）</b>：良性 / 内脏（心血管）/ 神经 / 晚期潜伏。</li>
+      </ul>
+      <h4>各期临床（病例题必考）</h4>
+      <ul class="pts">
+        <li><b>一期·硬下疳</b>：潜伏 <span class="k">2–4 周</span>；<span class="k">单个、圆形、软骨样硬、无痛无压痛、表面清洁含大量螺旋体</span>；伴无痛性淋巴结肿大。</li>
+        <li><b>二期</b>：感染后 7–10 周；掌跖斑丘疹具特征性、一般不痒；<span class="k">扁平湿疣、黏膜斑含大量螺旋体传染性最强</span>；虫蚀状脱发；号称"<b>最大的模仿者</b>"。</li>
+        <li><b>三期</b>（约 40% 未治者）：树胶肿；心血管梅毒（10–30 年）；神经梅毒。</li>
+        <li>神经梅毒潜伏：脑膜血管 4–7 年 / 麻痹性痴呆 10–15 年（阿罗瞳孔）/ 脊髓痨 10–20 年（夏科关节）。</li>
+      </ul>
+      <h4>实验室（详见"核心对照"①）</h4>
+      <ul class="pts">
+        <li>早期首选<span class="k">暗视野</span>；<span class="k">非特异性(RPR/TRUST)管疗效判愈，特异性(TPPA)管确诊</span>。</li>
+        <li><span class="kw">前带现象</span>：二期抗体过多致非特异性假阴性，稀释后转阳。神经梅毒脑脊液查 VDRL。</li>
+      </ul>
+      <h4>判愈·随访·性伴</h4>
+      <ul class="pts">
+        <li>疗效看非特异性滴度：3 月降 4 倍、一期 1 年/二期 2 年转阴；<span class="kw">回升 4 倍=失败/再感染</span>。</li>
+        <li>性伴：前 <span class="k">3 个月</span>内接触者检查，不能查按一期预防性治疗。早期随访 2–3 年。</li>
+      </ul>
+      <h4>母婴</h4>
+      <ul class="pts">
+        <li>先天梅毒<span class="kw">不发生硬下疳</span>，相当二期。晚期先天三征：<b>郝秦生齿+间质性角膜炎+神经性耳聋</b>。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>淋病 <span class="en">Gonorrhea</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <h4>病原</h4>
+      <ul class="pts"><li><b>淋病奈瑟菌</b>：革兰阴性肾形双球菌，成对排列，人为唯一宿主；娇嫩喜潮湿+CO₂。</li></ul>
+      <h4>临床（性别差异是考点）</h4>
+      <ul class="pts">
+        <li>潜伏期 <span class="k">2–10 天</span>。<b>男性</b> 85% 急性尿道炎、脓性"糊口"、尿痛。</li>
+        <li><b>女性</b> <span class="kw">80% 症状轻/无症状</span> → 携带传播；主要宫颈炎。</li>
+        <li><b>PID=最重要并发症</b>：输卵管炎 1/2/≥3 次→不育 11/25/53%；异位妊娠风险 7–10 倍。</li>
+        <li>新生儿结膜炎：产道感染，出生后 4–21 天，<span class="k">多双侧</span>；成人多单侧。</li>
+      </ul>
+      <h4>实验室</h4>
+      <ul class="pts">
+        <li>男性尿道<span class="k">涂片革兰染色 &gt;95% 可诊断</span>；女性宫颈涂片 40–70% <span class="kw">需培养确诊</span>。</li>
+        <li><b>培养=金标准</b>（Thayer-Martin+氧化酶+糖发酵）；<span class="k">PPNG</span>=产青霉素酶耐药株（β-内酰胺酶/青霉素琼脂法）。</li>
+      </ul>
+      <h4>治疗·预防</h4>
+      <ul class="pts">
+        <li>首选<span class="k">头孢曲松 250mg 肌注单次</span>；青霉素/四环素/喹诺酮因高耐药已不推荐；常合并衣原体一并处理。</li>
+        <li>新生儿眼炎预防：出生后 1h 内 0.5% 红霉素眼膏或 1% 硝酸银点眼。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>沙眼衣原体感染 <span class="en">Chlamydia trachomatis</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <h4>病原（原理常考）</h4>
+      <ul class="pts">
+        <li>细胞内寄生；<span class="k">D–K 型主泌尿生殖道（D/E/F 最常见）</span>；L1–L3=性病性淋巴肉芽肿。</li>
+        <li>双相：<b>原体(EB)有感染性、细胞外存活；网状体(RB)细胞内增殖、无感染性</b>。</li>
+      </ul>
+      <h4>临床</h4>
+      <ul class="pts">
+        <li>男性尿道炎潜伏 1–3 周，占非淋菌性尿道炎 30–50%；SARA 反应性关节炎。</li>
+        <li>女性宫颈炎 <span class="kw">70–90% 无症状</span>；PID→不育/异位妊娠/慢性盆腔痛；肝周围炎(Fitz-Hugh-Curtis)。</li>
+        <li>母婴：新生儿结膜炎（5–12 天）、肺炎（3–16 周龄，不发热间断咳）。<span class="k">无症状多→需筛查</span>。</li>
+      </ul>
+      <h4>实验室（用途定位是考点）</h4>
+      <ul class="pts">
+        <li><b>细胞培养=最特异</b>，可作证实+判愈；DFA/ELISA 适合高流行率筛查；乳胶层析适合基层。</li>
+        <li><span class="kw">血清抗体不能单独诊断</span>；NAAT 敏/特 95%/98% 但不分死活菌。</li>
+      </ul>
+      <h4>治疗·判愈</h4>
+      <ul class="pts">
+        <li>首选<span class="k">阿奇霉素 1g 单剂 / 多西环素 0.1g bid×7 天</span>；孕妇用红霉素或阿奇、禁多西/氧氟，<span class="kw">必须判愈</span>。</li>
+        <li>判愈：<span class="k">抗原后 2 周 / 核酸后 3–4 周</span>；女性治后 3–4 月复查；性伴前 2 个月。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>生殖器疱疹 <span class="en">Genital Herpes</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <h4>病原</h4>
+      <ul class="pts">
+        <li><b>HSV</b>（DNA 病毒），<span class="k">HSV-2 为主</span>（HSV-1 占 10–40%）；<span class="k">糖蛋白 gG 是型特异蛋白</span>（分型依据）。</li>
+        <li>潜伏于<b>骶神经根</b>，是复发根本原因。</li>
+      </ul>
+      <h4>临床</h4>
+      <ul class="pts">
+        <li>原发潜伏 2–20 天（多 3–5）、皮损重全身症状明显；复发多 HSV-2，90% 有前驱症状、皮损少单侧。</li>
+        <li><span class="kw">性/垂直传播多发生在无症状排毒期</span>（公卫要点）。</li>
+      </ul>
+      <h4>母婴</h4>
+      <ul class="pts">
+        <li>原发 GH 传胎儿 20–50%；<span class="kw">新生儿 HSV 不治病死&gt;50%</span>（70% HSV-2）。</li>
+        <li><b>原发+分娩仍有活动损害 → 剖宫产</b>；复发性对胎儿影响小(&lt;8%)。</li>
+      </ul>
+      <h4>实验室·治疗</h4>
+      <ul class="pts">
+        <li><b>病毒分离培养=金标准</b>；Tzanck 多核巨细胞+核内包涵体；<span class="k">gG 型特异抗体查亚临床</span>；PCR 是疱疹性脑膜炎首选。</li>
+        <li>首选阿昔洛韦类；频繁复发(≥6 次/年)→长期抑制疗法；无症状不治。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>尖锐湿疣 <span class="en">Condyloma Acuminatum · HPV</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <h4>病原·分型（★必考）</h4>
+      <ul class="pts">
+        <li><b>HPV</b>（不能体外培养）。<span class="k">低危 6、11</span>（引起尖锐湿疣）；<span class="kw">高危 16、18</span>（宫颈癌）；中等 31/33/35。</li>
+      </ul>
+      <h4>临床（三态）</h4>
+      <ul class="pts">
+        <li>潜伏 1–8 月（平均 3）；发病高峰 20–40 岁；菜花/乳头/鸡冠状增生。</li>
+        <li><b>可见疣体 / 亚临床（醋酸白阳、肉眼不见）/ 潜伏（醋酸白阴、仅查出 HPV）</b>——后两者是复发原因。</li>
+      </ul>
+      <h4>实验室</h4>
+      <ul class="pts">
+        <li><span class="kw">醋酸白：5% 醋酸 5 分钟变白，特异性差有假阳</span>；病理<b>凹空细胞 koilocytes</b> 特征；核酸杂交/PCR 最敏感可分型。</li>
+      </ul>
+      <h4>判愈·复发·性伴</h4>
+      <ul class="pts">
+        <li>判愈=<span class="k">疣体消失</span>（均可复发）；治疗前后必做醋酸白清除亚临床。</li>
+        <li>复发源：<span class="k">尿道内 60%、阴囊 22% 为 HPV 贮存库</span>；女性性伴查宫颈癌细胞学。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>软下疳 <span class="en">Chancroid</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="body">
+      <ul class="pts">
+        <li>别名<b>第三性病</b>；病原<b>杜克雷嗜血杆菌</b>（革兰阴性短杆菌，成堆/链状）；<span class="kw">我国尚无确诊病例</span>。</li>
+        <li>潜伏 3–14 天（平均 4–7）；<span class="kw">疼痛剧烈、质软的化脓性深溃疡</span>（与硬下疳"硬而无痛"相反）；蜡样脓苔。</li>
+        <li><b>三联征</b>：潜蚀性溃疡边缘 + 脓性污秽灰色基底 + 中重度疼痛。</li>
+        <li>软下疳横痃：痛性单侧腹股沟化脓淋巴结炎，<span class="k">窦道"鱼口样"</span>具特征性。</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- ============ 鉴别 ============ -->
+<section class="panel" id="p-ddx" role="tabpanel">
+  <p class="eyebrow">Differential Dx</p>
+  <p class="lead">鉴别题历年高频。核心记忆：<b>生殖器溃疡三大鉴别</b> 与 <b>淋病 vs 衣原体</b>。</p>
+
+  <h2 class="sec">生殖器溃疡三大鉴别 <span class="pill warn">高频</span></h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>特征</th><th>硬下疳（梅毒一期）</th><th>软下疳</th><th>生殖器疱疹</th></tr></thead>
+    <tbody>
+      <tr><td>病原</td><td>苍白螺旋体</td><td>杜克雷嗜血杆菌</td><td>HSV</td></tr>
+      <tr><td>潜伏期</td><td>2–4 周</td><td>3–14 天</td><td>2–20 天(多3–5)</td></tr>
+      <tr><td>数目</td><td>通常单个</td><td>常多个/融合</td><td>集簇多个</td></tr>
+      <tr><td>溃疡</td><td class="hl">硬·清洁·边缘整齐</td><td class="hlw">软·深·脏·边缘不整</td><td>浅·集簇小溃疡</td></tr>
+      <tr><td><strong>疼痛</strong></td><td class="hl">无痛无压痛</td><td class="hlw">剧痛</td><td>疼痛/烧灼</td></tr>
+      <tr><td>淋巴结</td><td>无痛·不化脓</td><td class="hlw">痛·化脓·鱼口样窦道</td><td>可肿痛·不化脓</td></tr>
+      <tr><td>特异检查</td><td>暗视野·RPR/TPPA</td><td>涂片/培养杜克雷杆菌</td><td>病毒培养·Tzanck</td></tr>
+      <tr><td>复发</td><td>否</td><td>否</td><td class="hl">易复发</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="lead" style="margin:12px 0 0">🔑 口诀：<b>硬下疳"硬而不痛净"，软下疳"软痛脏化脓"，疱疹"集簇易复发"。</b></p>
+
+  <h2 class="sec">淋病 vs 生殖道沙眼衣原体</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>项目</th><th>淋病</th><th>沙眼衣原体</th></tr></thead>
+    <tbody>
+      <tr><td>潜伏期</td><td class="hl">3–5 天</td><td>1–3 周或更长</td></tr>
+      <tr><td>尿痛</td><td>多见、明显</td><td>轻微或不痛</td></tr>
+      <tr><td>分泌物</td><td class="hl">量多、脓性</td><td>量少、黏液状</td></tr>
+      <tr><td>镜检</td><td>白细胞内革兰阴性双球菌</td><td>无双球菌</td></tr>
+      <tr><td>培养</td><td>淋球菌</td><td>沙眼衣原体</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="sec">尖锐湿疣 vs 假性湿疣 / 扁平湿疣</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>病</th><th>特点</th><th>醋酸白 / 关键</th></tr></thead>
+    <tbody>
+      <tr><td><strong>尖锐湿疣</strong></td><td>增生性菜花样</td><td class="hl">醋酸白阳性；病理凹空细胞</td></tr>
+      <tr><td>阴茎珍珠状丘疹</td><td>冠状沟成行小丘疹（正常变异）</td><td>醋酸白阴性</td></tr>
+      <tr><td>绒毛状小阴唇（假性湿疣）</td><td>小阴唇内侧鱼子/绒毛状（正常变异）</td><td>醋酸白阴性</td></tr>
+      <tr><td><strong>扁平湿疣</strong>（二期梅毒）</td><td>肛周外阴扁平潮湿</td><td class="hlw">暗视野查螺旋体·RPR/TPHA 阳性</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 自测 ============ -->
+<section class="panel" id="p-quiz" role="tabpanel">
+  <p class="eyebrow">Self Test</p>
+  <p class="lead">40 题，公共卫生 / 实验室 / 鉴别 / 病例四类。点"看答案"揭示解析。可按类别筛选。</p>
+  <div class="qbar">
+    <div class="filters" id="filters">
+      <button class="chip" data-f="all" aria-pressed="true">全部</button>
+      <button class="chip" data-f="ph" aria-pressed="false">公共卫生</button>
+      <button class="chip" data-f="lab" aria-pressed="false">实验室</button>
+      <button class="chip" data-f="ddx" aria-pressed="false">鉴别</button>
+      <button class="chip" data-f="case" aria-pressed="false">病例分析</button>
+    </div>
+    <button class="reveal-all" id="revealAll" type="button">展开全部答案</button>
+    <span class="counter"><b id="seen">0</b> / <span id="total">40</span> 已看</span>
+  </div>
+  <div id="quizList"></div>
+</section>
+
+<div class="foot">
+  内容整理自《中国临床皮肤病学（第2版）》第四篇·性传播疾病章（38 页）。数字/时限/试验名称依教材原文。<br>
+  本材料不含法定传染病报告分类等疫情管理条文——如需，请以官方《传染病防治法》《性病防治管理办法》为准。仅供个人复习与同行交流。
+</div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // ---- theme toggle ----
+  var root=document.documentElement, tb=document.getElementById('themeBtn');
+  function cur(){var e=root.getAttribute('data-theme'); if(e) return e; return matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+  tb.addEventListener('click',function(){root.setAttribute('data-theme', cur()==='dark'?'light':'dark');});
+
+  // ---- tabs ----
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels={cards:'p-cards',core:'p-core',dz:'p-dz',ddx:'p-ddx',quiz:'p-quiz'};
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected','false');});
+      t.setAttribute('aria-selected','true');
+      Object.keys(panels).forEach(function(k){document.getElementById(panels[k]).classList.remove('on');});
+      document.getElementById(panels[t.dataset.p]).classList.add('on');
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+
+  // ---- quiz data ----
+  var Q=[
+    // 公共卫生 ph
+    {c:'ph',t:'梅毒的<em>疗效观察与判愈</em>应选用哪一类血清学试验？为什么？',a:'<b>非特异性(非螺旋体抗原)试验——RPR / TRUST / VDRL / USR</b>，做定量。其滴度随病情活动变化，可反映疗效、判愈及复发/再感染。<b>特异性试验(TPPA等)治疗后终生阳性，<span class="kw">不能</span>用于疗效观察。</b>'},
+    {c:'ph',t:'梅毒治疗后随访中，血清滴度<em>回升 4 倍</em>提示什么？',a:'提示<b>再感染或治疗失败</b>，应加倍剂量复治并考虑腰穿查脑脊液。'},
+    {c:'ph',t:'梅毒的性伴追溯期是多久？不能来检查者如何处理？',a:'出现症状/确诊<b>前 3 个月内</b>接触过传染性梅毒的性伴均应检查；不能检查者<b>按一期梅毒做预防性(流行病学)治疗</b>；能复查者每月 1 次临床+RPR。'},
+    {c:'ph',t:'早期梅毒充分治疗后随访多长时间、频率如何？',a:'随访 <b>2–3 年</b>；<b>第 1 年每 3 个月复查 1 次</b>（临床+非特异性血清），以后每半年 1 次，无复发可终止。'},
+    {c:'ph',t:'沙眼衣原体感染的<em>判愈试验</em>应在疗程结束后何时做？',a:'<b>抗原检测→疗程结束后 2 周；核酸扩增(NAAT)→疗程结束后 3–4 周</b>（核酸能测到死菌，需更久）。女性另建议治后 <b>3–4 个月</b>复查以发现再感染。'},
+    {c:'ph',t:'沙眼衣原体感染的性伴追溯期？',a:'出现症状或确诊<b>前 2 个月内的所有性伴</b>均应检查+治疗；疗程完成前避免性行为。'},
+    {c:'ph',t:'为什么孕妇沙眼衣原体感染治疗后"必须做判愈试验"？用什么药？',a:'因妊娠期所用药物<b>疗效相对较差</b>，故必须判愈。用<b>红霉素或阿奇霉素</b>；<span class="kw">禁用多西环素、氧氟沙星</span>。'},
+    {c:'ph',t:'尖锐湿疣的判愈标准是什么？',a:'<b>临床可见疣体消失即为治愈</b>；但各种疗法均可复发，再次治疗仍有效。治疗前后须做醋酸白试验尽量清除亚临床损害以减少复发。'},
+    {c:'ph',t:'尖锐湿疣患者的女性性伴应做什么筛查？',a:'<b>宫颈癌细胞学筛查</b>（HPV 与宫颈癌相关）。并告知患者/性伴：疣体消失后仍有传染性。'},
+    {c:'ph',t:'原发性生殖器疱疹孕妇，分娩时仍有活动性损害，应如何处理？',a:'<b>建议剖宫产</b>，以防新生儿 HSV 感染。'},
+    {c:'ph',t:'新生儿淋菌性眼炎如何预防？',a:'出生后 <b>1 小时内</b>用 <b>0.5% 红霉素眼膏 或 1% 硝酸银眼药水</b>点眼 1 次。'},
+    {c:'ph',t:'生殖器疱疹的性传播和垂直传播主要发生在什么时期？',a:'多发生在<b>亚临床/无症状排毒期</b>——此期无症状体征但有排毒、有传染性。故强调告知性伴、无症状期也可传染。'},
+    {c:'ph',t:'频繁复发的生殖器疱疹（每年复发多少次）需采用长期抑制疗法？',a:'<b>每年复发 ≥6 次</b>者采用长期抑制疗法，疗程一般 4 个月至 1 年。'},
+    // 实验室 lab
+    {c:'lab',t:'梅毒的<em>确诊(证实)试验</em>用哪一类？举出代表试验。',a:'用<b>特异性(螺旋体抗原)试验</b>——<b>TPPA / TPHA / FTA-ABS / EIA</b>。测抗螺旋体 IgG，特异性高，用于确诊。'},
+    {c:'lab',t:'什么是前带现象(prozone)？多见于梅毒哪一期？',a:'非特异性试验(如 VDRL)因<b>抗心磷脂抗体过多</b>，抑制阳性反应，出现假阴性/弱阳性；<b>血清稀释后再测转为阳性</b>。多见于<b>二期梅毒</b>，约 1%–2% 因此假阴性。'},
+    {c:'lab',t:'诊断神经梅毒时，脑脊液首选哪个血清学试验？如何判读？',a:'脑脊液首选 <b>VDRL</b>：特异性高，<b>阳性即有诊断价值</b>；但敏感性不高，<b>阴性不能排除</b>神经梅毒。'},
+    {c:'lab',t:'为什么梅毒早期诊断不能靠"培养"？改用什么？',a:'苍白螺旋体<b>至今不能体外培养</b>。早期改用<b>暗视野显微镜</b>查活螺旋体（硬下疳、扁平湿疣、黏膜斑），阴性连查 3 天；加血清学。'},
+    {c:'lab',t:'非特异性与特异性梅毒血清试验，谁出结果早？',a:'<b>特异性 FTA-ABS 感染后 3 周即阳（最灵敏，尤其一期）</b>；非特异性 VDRL/RPR 感染后 4 周才阳。'},
+    {c:'lab',t:'淋病诊断的金标准是什么？用什么培养基？',a:'<b>淋球菌培养=金标准</b>，用<b>Thayer-Martin 选择培养基</b>（含万古霉素/多黏菌素/制霉菌素），富 CO₂、35℃、24–48h；配合氧化酶试验、糖发酵鉴定。'},
+    {c:'lab',t:'男性和女性淋病用涂片革兰染色诊断的价值有何不同？',a:'<b>男性急性尿道炎涂片阳性率 &gt;95%，可诊断</b>；<b>女性宫颈涂片仅 40–70%，敏感性低，需培养确诊</b>。咽部不推荐涂片。'},
+    {c:'lab',t:'PPNG 指什么？如何检测？',a:'<b>产青霉素酶淋球菌(耐药株)</b>。获耐药质粒后产 <b>β-内酰胺酶</b>分解青霉素；用青霉素酶试验/青霉素琼脂法检测。'},
+    {c:'lab',t:'沙眼衣原体检测中，哪种方法最特异、且可用于治疗后判愈？',a:'<b>细胞培养法</b>：最特异（敏感 70–95%），可作<b>证实试验+治疗后判愈试验</b>。'},
+    {c:'lab',t:'沙眼衣原体的血清抗体检测能否单独用于诊断？',a:'<b>不能</b>。血清抗体一般<b>不能区分现症与既往感染</b>，高危人群本底检出率高。仅 LGV、附睾炎、输卵管炎、新生儿肺炎(IgM)时有辅助价值。'},
+    {c:'lab',t:'NAAT 检测衣原体/淋球菌，敏感高但有何解释上的局限？',a:'<b>不能区分死菌与活菌</b>——治疗后残留核酸仍可阳性，故判愈需等足够时间（核酸后 3–4 周），结果解释宜慎。'},
+    {c:'lab',t:'生殖器疱疹实验室诊断的金标准？Tzanck 涂片见什么？',a:'金标准=<b>病毒分离培养</b>（水疱敏感 94%）。<b>Tzanck 涂片见多核巨细胞+核内包涵体</b>。'},
+    {c:'lab',t:'发现 HSV 亚临床/无症状感染最可行的手段是什么？',a:'<b>型特异性血清抗体检测</b>（以<b>糖蛋白 G(gG)</b>为抗原，可区分 HSV-1/2）。'},
+    {c:'lab',t:'醋酸白试验的方法与局限性？',a:'<b>5% 醋酸涂布，5 分钟</b>后 HPV 感染部位变白。<b>特异性不高，有假阳性</b>（念珠菌性外阴炎、外伤、非特异性炎症）。'},
+    {c:'lab',t:'尖锐湿疣的组织病理特征性细胞是什么？',a:'<b>凹空细胞(koilocytes)</b>，位于棘层上方和颗粒层；但无凹空细胞也不能排除尖锐湿疣。'},
+    {c:'lab',t:'检出 HPV 感染最敏感的方法是什么？',a:'<b>核酸杂交 / PCR</b>——PCR 最敏感且可做型特异性分析；核酸杂交一般无假阳性，PCR 有污染假阳性风险。'},
+    {c:'lab',t:'哪种检查是疱疹性脑膜炎的首选诊断方法？',a:'<b>PCR</b>。此外多重 PCR 可同时检测 HSV、梅毒螺旋体和杜克雷嗜血杆菌，用于生殖器溃疡鉴别。'},
+    // 鉴别 ddx
+    {c:'ddx',t:'硬下疳与软下疳在"疼痛/质地/淋巴结"上如何区别？',a:'<b>硬下疳：硬、无痛无压痛、表面清洁、淋巴结无痛不化脓</b>；<b>软下疳：软、剧痛、脏、淋巴结痛且化脓成鱼口样窦道</b>。口诀：硬而不痛净 / 软痛脏化脓。'},
+    {c:'ddx',t:'淋病与生殖道沙眼衣原体在潜伏期和分泌物上的区别？',a:'<b>淋病：潜伏 3–5 天、分泌物量多脓性、镜检见白细胞内革兰阴性双球菌</b>；<b>衣原体：潜伏 1–3 周、分泌物量少黏液状、无双球菌</b>。'},
+    {c:'ddx',t:'如何把尖锐湿疣与"珍珠状丘疹/绒毛状小阴唇"区分开？',a:'后两者是<b>正常生理变异，醋酸白阴性</b>、不增生；尖锐湿疣醋酸白阳性、病理有凹空细胞。'},
+    {c:'ddx',t:'肛周/外阴扁平潮湿的"扁平湿疣"是什么病的表现？如何证实？',a:'是<b>二期梅毒</b>的特征性损害（含大量螺旋体、传染性强）。<b>暗视野查到螺旋体、RPR 和 TPHA 阳性</b>可证实。'},
+    {c:'ddx',t:'生殖器溃疡中，哪种"易复发"？据此可提示什么病原？',a:'<b>生殖器疱疹易复发</b>（潜伏于骶神经根）；硬下疳、软下疳一般不复发。反复集簇性水疱/溃疡→提示 HSV。'},
+    // 病例 case
+    {c:'case',t:'病例：男，不洁性交 3 周后，阴茎冠状沟单个约 1cm 无痛硬结性溃疡，表面清洁，腹股沟无痛性淋巴结肿大。最可能诊断？首选检查？',a:'诊断：<b>一期梅毒（硬下疳）</b>。首选<b>暗视野显微镜</b>查螺旋体；血清学 RPR 筛查 + <b>TPPA 确诊</b>。'},
+    {c:'case',t:'病例：男，不洁性交 5 天后尿道口大量黄脓性分泌物"糊口"、明显尿痛。诊断？首选检查？',a:'诊断：<b>淋病（急性尿道炎）</b>。<b>尿道分泌物涂片革兰染色</b>见白细胞内革兰阴性双球菌（男性阳性率&gt;95%）即可诊断；培养为金标准。首选头孢曲松 250mg 单次。'},
+    {c:'case',t:'病例：女，宫颈接触性出血、少量黏液脓性分泌物，多数无症状；配偶患"非淋菌性尿道炎"。最可能诊断？如何确诊、如何随访？',a:'诊断：<b>沙眼衣原体宫颈炎</b>。确诊用 <b>NAAT 或细胞培养</b>。治后女性 <b>3–4 个月复查</b>再感染；性伴前 2 个月同查同治。'},
+    {c:'case',t:'病例：青年男性外阴反复发作集簇性水疱、小溃疡伴疼痛，1 年发作 6 次，发作前有局部烧灼感。诊断？处理原则？',a:'诊断：<b>复发性生殖器疱疹</b>（前驱症状+集簇复发，多 HSV-2）。因<b>每年≥6 次</b>，采用<b>长期抑制疗法</b>（阿昔洛韦类，疗程 4 月–1 年）。'},
+    {c:'case',t:'病例：患者外阴多发菜花样增生物 2 个月，无痛；醋酸白试验变白。诊断？判愈标准？减少复发的关键？',a:'诊断：<b>尖锐湿疣(HPV)</b>。判愈=<b>疣体消失</b>。减少复发：治疗前后做醋酸白清除<b>亚临床/潜伏感染</b>，处理尿道内/阴囊贮存库及包皮过长/阴道炎等诱因，性伴同查。'}
+  ];
+
+  var list=document.getElementById('quizList');
+  var seenSet={};
+  document.getElementById('total').textContent=Q.length;
+  var catName={ph:'公共卫生',lab:'实验室',ddx:'鉴别',case:'病例分析'};
+  Q.forEach(function(q,i){
+    var el=document.createElement('div');
+    el.className='q'; el.dataset.cat=q.c;
+    el.innerHTML=
+      '<div class="qtop"><div class="qi">'+(i+1)+'</div><div><div class="cat">'+catName[q.c]+'</div><div class="qt">'+q.t+'</div></div></div>'+
+      '<button class="showbtn" type="button">看答案</button>'+
+      '<div class="ans">'+q.a+'</div>';
+    var btn=el.querySelector('.showbtn');
+    btn.addEventListener('click',function(){
+      var open=el.classList.toggle('open');
+      btn.textContent=open?'收起答案':'看答案';
+      if(open && !seenSet[i]){seenSet[i]=1; updateSeen();}
+    });
+    list.appendChild(el);
+  });
+  function updateSeen(){document.getElementById('seen').textContent=Object.keys(seenSet).length;}
+
+  // ---- filters ----
+  var chips=[].slice.call(document.querySelectorAll('#filters .chip'));
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      c.setAttribute('aria-pressed','true');
+      var f=c.dataset.f;
+      [].slice.call(list.children).forEach(function(el){
+        el.classList.toggle('hide', f!=='all' && el.dataset.cat!==f);
+      });
+    });
+  });
+
+  // ---- reveal all ----
+  var ra=document.getElementById('revealAll'), allOpen=false;
+  ra.addEventListener('click',function(){
+    allOpen=!allOpen;
+    [].slice.call(list.children).forEach(function(el,i){
+      if(el.classList.contains('hide')) return;
+      el.classList.toggle('open',allOpen);
+      el.querySelector('.showbtn').textContent=allOpen?'收起答案':'看答案';
+      if(allOpen){seenSet[i]=1;}
+    });
+    ra.textContent=allOpen?'收起全部答案':'展开全部答案';
+    if(allOpen) updateSeen();
+  });
+})();
+</script>
+
+</body>
+</html>
