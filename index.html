@@ -255,7 +255,9 @@
   :root[data-theme="dark"] .streak-toast{color:#052b24}
   @media(prefers-color-scheme:dark){.streak-toast{color:#052b24}}
   @keyframes toast{0%{opacity:0;transform:translateX(-50%) scale(.7) translateY(12px)}14%{opacity:1;transform:translateX(-50%) scale(1.05) translateY(0)}24%{transform:translateX(-50%) scale(1)}80%{opacity:1}100%{opacity:0;transform:translateX(-50%) translateY(-16px)}}
-  @media (prefers-reduced-motion:reduce){.fb,.qcard.shake,.qcard.glow,.streak-toast{animation:none}}
+  .rocket{position:fixed; left:50%; bottom:-25vh; z-index:1001; font-size:clamp(90px,26vw,240px); line-height:1; pointer-events:none; transform:translateX(-50%) rotate(-45deg); filter:drop-shadow(0 6px 26px rgba(255,120,30,.65)); animation:launch 1.3s cubic-bezier(.32,.06,.5,1) forwards}
+  @keyframes launch{0%{bottom:-28vh;opacity:0;transform:translateX(-50%) rotate(-45deg) scale(.55)}10%{opacity:1}45%{transform:translateX(-44%) rotate(-45deg) scale(1.08)}70%{transform:translateX(-56%) rotate(-45deg) scale(1)}100%{bottom:125vh;opacity:.9;transform:translateX(-50%) rotate(-45deg) scale(.8)}}
+  @media (prefers-reduced-motion:reduce){.fb,.qcard.shake,.qcard.glow,.streak-toast,.rocket{animation:none}.rocket{display:none}}
 </style>
 </head>
 <body>
@@ -751,6 +753,14 @@
     document.body.appendChild(t); setTimeout(function(){t.remove();},1600);
     if(!reduce()) burst(innerWidth/2, innerHeight*0.24, 'big');
   }
+  function rocket(){
+    if(reduce()) return;
+    var r=document.createElement('div'); r.className='rocket'; r.textContent='🚀';
+    document.body.appendChild(r);
+    setTimeout(function(){burst(innerWidth/2, innerHeight*0.72, 'big');},120);
+    setTimeout(function(){burst(innerWidth/2, innerHeight*0.42, 'big');},430);
+    setTimeout(function(){r.remove();},1400);
+  }
 
   function fbFor(q,pick_i){
     var ok=pick_i===q.ans;
@@ -826,11 +836,13 @@
           if(p===q.ans){
             st.streak++;
             burst(cx,cy, st.streak>=5?'big':'normal');
+            if(navigator.vibrate) navigator.vibrate(18);
             if(!reduce()){card.classList.add('glow'); setTimeout(function(){card.classList.remove('glow');},700);}
-            if([3,5,10,15,20,30,50].indexOf(st.streak)>=0) streakToast(st.streak);
+            if([3,5,10,15,20,30,50].indexOf(st.streak)>=0){ rocket(); streakToast(st.streak); if(navigator.vibrate) navigator.vibrate([20,45,20,45,90]); }
           } else {
             st.streak=0;
             burst(cx,cy,'sad');
+            if(navigator.vibrate) navigator.vibrate([32,48,32]);
             if(!reduce()){card.classList.add('shake'); setTimeout(function(){card.classList.remove('shake');},460);}
           }
           $('streak').textContent=st.streak;
